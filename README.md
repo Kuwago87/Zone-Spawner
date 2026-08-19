@@ -47,7 +47,7 @@ passive animals: any valid Minecraft 'EntityType' can be assigned to a zone.
 | '/zone maxheight <name> <blocksAboveFloor\|0>' | Cap how high above the floor spawns are allowed (0 = unlimited). |
 | '/zone floor <name> [y\|reset]' | Manually set (or reset) the zone's floor Y, independent of its corners. |
 
-'<entityType>' accepts any [Bukkit 'EntityType'](https://jd.papermc.io/paper/1.21/org/bukkit/entity/EntityType.html)
+'<entityType>' accepts any ['EntityType'](https://minecraft.wiki/w/Java_Edition_protocol/Entity_metadata#Entities)
 name ('COW', 'ZOMBIE', 'PHANTOM', ...) - tab-complete only *suggests* common
 passive animals, it isn't a whitelist.
 
