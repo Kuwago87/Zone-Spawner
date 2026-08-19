@@ -1,0 +1,34 @@
+name: ZoneSpawner
+version: '1.0.8'
+main: io.tony.zonespawner.ZoneSpawnerPlugin
+description: Define zones and auto-regulate animal populations within them.
+author: Tony
+api-version: '26.2'
+load: POSTWORLD
+
+commands:
+  zpos1:
+    description: Set the first corner of your zone selection to your current position.
+    usage: /zpos1
+    permission: zonespawner.admin
+  zpos2:
+    description: Set the second corner of your zone selection to your current position.
+    usage: /zpos2
+    permission: zonespawner.admin
+  zpos3:
+    description: Optional - mark your current position as the zone's floor height.
+    usage: /zpos3
+    permission: zonespawner.admin
+  zonecreate:
+    description: Create a zone from your current /zpos1, /zpos2 (and optional /zpos3) selection.
+    usage: /zonecreate <name>
+    permission: zonespawner.admin
+  zone:
+    description: Manage animal spawn rules for a zone.
+    usage: /zone <set|remove|list|info|delete> ...
+    permission: zonespawner.admin
+
+permissions:
+  zonespawner.admin:
+    description: Allows creating and managing animal zones.
+    default: op
