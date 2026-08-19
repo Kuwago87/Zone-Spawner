@@ -1,4 +1,4 @@
-# ZoneSpawner (Animal Control)
+# ZoneSpawner (Animal/ Mob Control)
 
 A Paper plugin that lets you draw rectangular zones and auto-regulate a
 population cap per mob species inside each one - the classic "keep a farm
