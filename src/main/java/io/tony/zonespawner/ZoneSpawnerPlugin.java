@@ -7,6 +7,7 @@ import io.tony.zonespawner.task.ZoneSpawnTask;
 import io.tony.zonespawner.zone.SelectionManager;
 import io.tony.zonespawner.zone.ZoneManager;
 import io.tony.zonespawner.zone.ZoneTagKeys;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ZoneSpawnerPlugin extends JavaPlugin {
@@ -14,9 +15,13 @@ public final class ZoneSpawnerPlugin extends JavaPlugin {
     /** How often (in ticks) the spawn regulation task runs. 20 ticks = 1 second. */
     private static final long TASK_PERIOD_TICKS = 20L;
 
+    // bStats plugin ID for ZoneSpawner - see https://bstats.org/plugin/bukkit/ZoneSpawner/34218
+    private static final int BSTATS_PLUGIN_ID = 34218;
+
     private ZoneManager zoneManager;
     private SelectionManager selectionManager;
     private ZoneTagKeys tagKeys;
+    private Metrics metrics;
 
     @Override
     public void onEnable() {
@@ -45,6 +50,8 @@ public final class ZoneSpawnerPlugin extends JavaPlugin {
                 TASK_PERIOD_TICKS,
                 TASK_PERIOD_TICKS
         );
+
+        this.metrics = new Metrics(this, BSTATS_PLUGIN_ID);
 
         getLogger().info("ZoneSpawner enabled.");
     }

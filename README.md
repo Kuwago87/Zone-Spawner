@@ -88,6 +88,10 @@ a ZoneSpawner zone will spawn normally even inside peaceful faction
 territory, while ambient/natural hostile spawns nearby are still blocked as
 intended. See FactionsMobGuard's own README for details.
 
+## Metrics (bStats)
+
+ZoneSpawner reports anonymous usage statistics via [bStats](https://bstats.org/plugin/bukkit/ZoneSpawner/34218) (plugin ID `34218`). This is bundled directly into the jar (relocated to avoid clashing with other plugins that also use bStats) - no separate install is required. Server owners can opt out globally via `plugins/bStats/config.yml` (`enabled: false`).
+
 ## Data
 
 Zones persist in 'plugins/ZoneSpawner/zones.yml', including their rules,
